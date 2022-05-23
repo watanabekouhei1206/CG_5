@@ -48,11 +48,17 @@
         const axisHelper = new THREE.AxisHelper(5); //軸の長さ　X：赤、Y：緑、z：青
         scene.add(axisHelper);
 
-        const geometry = new THREE.BoxGeometry( 2, 0.05, 0.001 );
-        const material = new THREE.MeshBasicMaterial( {color: 0xFF0000} );
-        const cube = new THREE.Mesh( geometry, material );
+        const geometry1 = new THREE.BoxGeometry( 2, 0.05, 0.001 );
+        const material1 = new THREE.MeshBasicMaterial( {color: 0xFF0000} );
+        const cube = new THREE.Mesh( geometry1, material1 );
         cube.position.y += 1;
         scene.add( cube );
+        
+        const geometry = new THREE.BoxGeometry( 1, 0.05, 0.001 );
+        const material = new THREE.MeshBasicMaterial( {color: 0xFF0000} );
+        const R = new THREE.Mesh( geometry, material );
+        R.position.y += 0.5;
+        scene.add( R );
         
 
         update();
