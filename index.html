@@ -75,11 +75,15 @@
           renderer.render(scene, camera);
           requestAnimationFrame(update);
 
+          const glasses = new THREE.Groupe();
+
+          glasses.add(cube);
+          glasses.add(R);
+          glasses.add(L);
 
           // ペンギンを回転させる
-          cube.rotation.y += 0.005;;
-          R.rotation.y += 0.005;
-          L.rotation.y += 0.005;
+          glasses.rotation.y += 0.005;;
+          
           // 全体を回転させる
           //all.rotation.x += 0.01;
           //all.rotation.y += 0.005;;
