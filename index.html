@@ -48,24 +48,13 @@
         const axisHelper = new THREE.AxisHelper(5); //軸の長さ　X：赤、Y：緑、z：青
         scene.add(axisHelper);
 
-        const geometry1 = new THREE.BoxGeometry( 2, 0.05, 0.001 );
-        const material1 = new THREE.MeshBasicMaterial( {color: 0xFF0000} );
+        const geometry1 = new THREE.BoxGeometry( 2, 0.5, 1);
+        const material1 = new THREE.MeshToonMaterial( {color: 0xC27526} );
         const cube = new THREE.Mesh( geometry1, material1 );
-        cube.position.y += 0.65;
+        cube.position.y += 0.4;
         scene.add( cube );
         
-        const geometry2 = new THREE.BoxGeometry( 0.7, 0.3, 0.001 );
-        const material2 = new THREE.MeshBasicMaterial( {color: 0xFFFFFF} );
-        const R = new THREE.Mesh( geometry2, material2 );
-        R.position.x = 0.5;
-        R.position.y += 0.5;
-        scene.add( R );
         
-        const geometry3 = new THREE.BoxGeometry( -0.7, 0.3, 0.001 );
-        const L = new THREE.Mesh( geometry3, material2 );
-        L.position.x = -0.5;
-        L.position.y += 0.5;
-        scene.add( L );
 
         update();
 
@@ -75,14 +64,11 @@
           renderer.render(scene, camera);
           requestAnimationFrame(update);
 
-          const glasses = new THREE.Groupe();
+          
 
-          glasses.add(cube);
-          glasses.add(R);
-          glasses.add(L);
-
+         
           // ペンギンを回転させる
-          glasses.rotation.y += 0.005;;
+          cybe.rotation.y += 0.005;;
           
           // 全体を回転させる
           //all.rotation.x += 0.01;
