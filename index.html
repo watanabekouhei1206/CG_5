@@ -54,13 +54,18 @@
         cube.position.y += 0.65;
         scene.add( cube );
         
-        const geometry = new THREE.BoxGeometry( 0.7, 0.3, 0.001 );
-        const material = new THREE.MeshBasicMaterial( {color: 0xFF0000} );
+        const geometry2 = new THREE.BoxGeometry( 0.7, 0.3, 0.001 );
+        const material2 = new THREE.MeshBasicMaterial( {color: 0xFFFFFF} );
         const R = new THREE.Mesh( geometry, material );
         R.position.x = 0.5;
         R.position.y += 0.5;
         scene.add( R );
         
+        const geometry3 = new THREE.BoxGeometry( -0.7, 0.3, 0.001 );
+        const L = new THREE.Mesh( geometry3, material2 );
+        R.position.x = -0.5;
+        R.position.y += 0.5;
+        scene.add( R );
 
         update();
 
@@ -73,7 +78,8 @@
 
           // ペンギンを回転させる
           cube.rotation.y += 0.005;;
-
+          R.rotation.y += 0.005;;
+          L.rotation.y += 0.005;;
           // 全体を回転させる
           //all.rotation.x += 0.01;
           //all.rotation.y += 0.005;;
