@@ -66,8 +66,7 @@
           //var material = new THREE.MeshStandardMaterial({ color: 0x0005555 });
   
   
-          var cylinderGeometry = new THREE.CylinderGeometry( 0.5
-          , 0.5, 1, 4 );
+          var cylinderGeometry = new THREE.CylinderGeometry( 0.3, 0.5, 1, 8);
           var cylinderMaterial = new THREE.MeshPhongMaterial( {color: 0x0000ff} );
           var cylinder = new THREE.Mesh( cylinderGeometry, cylinderMaterial );
           cylinder.position.set( 0, 0, -5 );
@@ -88,6 +87,7 @@
             //all.rotation.y += 0.005;;
           }
         }
+      
       </script>
   </body>
   </html>
