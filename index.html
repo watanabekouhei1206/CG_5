@@ -61,6 +61,30 @@
         leg1.position.z += 0.4;
         scene.add( leg1 );
 
+        const geometry3 = new THREE.BoxGeometry(-0.1, 0.25, 0.09);
+        const leg2 = new THREE.Mesh( geometry3, material1 );
+        leg2.position.x -= 0.9;
+        leg2.position.y += 0.15;
+        leg2.position.z += 0.4;
+        scene.add( leg2 );
+
+        const geometry4 = new THREE.BoxGeometry(0.1, 0.25, -0.09);
+        const leg3 = new THREE.Mesh( geometry4, material1 );
+        leg3.position.x += 0.9;
+        leg3.position.y += 0.15;
+        leg3.position.z -= 0.4;
+        scene.add( leg3 );
+
+        const geometry5 = new THREE.BoxGeometry(-0.1, 0.25, -0.09);
+        const leg4 = new THREE.Mesh( geometry2, material1 );
+        leg4.position.x -= 0.9;
+        leg4.position.y += 0.15;
+        leg4.position.z -= 0.4;
+        scene.add( leg4 );
+
+
+
+
         update();
 
         // 毎フレーム時に実行されるループイベントです
