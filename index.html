@@ -48,12 +48,10 @@
         const axisHelper = new THREE.AxisHelper(5); //軸の長さ　X：赤、Y：緑、z：青
         scene.add(axisHelper);
 
-        var cylinderGeometry = new THREE.CylinderGeometry( 0.1, 0.01, 0.001, 4 );
-        var cylinderMaterial = new THREE.MeshPhongMaterial( {color: 0x0000ff} );
-        var cylinder = new THREE.Mesh( cylinderGeometry, cylinderMaterial );
-        cylinder.position.set( 0, 0, 0);
-        scene.add( cylinder );
-
+        const geometry = new THREE.BoxGeometry( 1, 0.2, 0.1 );
+        const material = new THREE.MeshBasicMaterial( {color: 0xFF0000} );
+        const cube = new THREE.Mesh( geometry, material );
+        scene.add( cube );
         
 
         update();
