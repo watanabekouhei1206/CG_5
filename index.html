@@ -48,10 +48,10 @@
         const axisHelper = new THREE.AxisHelper(5); //軸の長さ　X：赤、Y：緑、z：青
         scene.add(axisHelper);
 
-        const geometry1 = new THREE.BoxGeometry( 2, 0.5, 1);
+        const geometry1 = new THREE.BoxGeometry( 2, 0.3, 1);
         const material1 = new THREE.MeshToonMaterial( {color: 0xC27526} );
         const cube = new THREE.Mesh( geometry1, material1 );
-        cube.position.y += 0.4;
+        cube.position.y += 0.2;
         scene.add( cube );
         
         
